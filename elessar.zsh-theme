@@ -1,6 +1,7 @@
 # Based on Gitster theme with a few improvements
 # https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme
 
+local multiline=false
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 
 function get_pwd(){
@@ -28,7 +29,15 @@ function get_git_status() {
   fi
 }
 
-PROMPT='$ret_status %{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)'
+function get_prompt() {
+  local prompt="$ret_status%{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)"
+  if "$multiline"; then
+    prompt="%{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)\n$ret_status"
+  fi
+  echo $prompt
+}
+
+PROMPT='$(get_prompt)'
 
 # Git info
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[cyan]%}"

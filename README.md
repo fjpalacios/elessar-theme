@@ -22,5 +22,11 @@ Then set the theme in your **~/.zshrc** file:
   ZSH_THEME="elessar"
 ```
 
+## Customization
+Now you have a `local multiline=false` initial line of configuration.
+The default appearance is the same as always, but now you have the option to
+turn your favorite prompt into a multi-line one. Just by switching
+`local multiline=false` into `local multiline=true`.
+
 ## Contribute
 Feel free to send a [PR](https://github.com/fjpalacios/elessar-theme/pulls) to improve this theme!
