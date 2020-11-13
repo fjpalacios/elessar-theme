@@ -30,7 +30,7 @@ function get_git_status() {
 }
 
 function get_prompt() {
-  local prompt="$ret_status%{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)"
+  local prompt="%{$fg[cyan]%}$(get_pwd) $(git_prompt_info)$(get_git_status)$ret_status%{$reset_color%}"
   if "$multiline"; then
     prompt="%{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)\n$ret_status"
   fi
