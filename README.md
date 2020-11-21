@@ -1,7 +1,7 @@
 # Elessar theme
 Theme based on [Gitster](https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme).
 
-![Elessar demo](elessar.gif)
+![Elessar demo](elessar.png)
 
 <sub>[FiraCode](https://github.com/tonsky/FiraCode) typography was used in this demo</sub>
 
