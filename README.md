@@ -23,10 +23,14 @@ Then set the theme in your **~/.zshrc** file:
 ```
 
 ## Customization
+**Multiline:**
 Now you have a `local multiline=false` initial line of configuration.
 The default appearance is the same as always, but now you have the option to
 turn your favorite prompt into a multi-line one. Just by switching
 `local multiline=false` into `local multiline=true`.
+
+**Directory first:**
+With `local directoryFirst=false` in config file, you can change the prompt's elements position to be like [rubbyrussel](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell) theme. For this porpose, just switch `local directoryFirst=false` into `local directoryFirst=true`
 
 ## Contribute
 Feel free to send a [PR](https://github.com/fjpalacios/elessar-theme/pulls) to improve this theme!

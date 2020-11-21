@@ -2,6 +2,7 @@
 # https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme
 
 local multiline=false
+local directoryFirst=false
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 
 function get_pwd(){
@@ -33,6 +34,8 @@ function get_prompt() {
   local prompt="$ret_status%{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)"
   if "$multiline"; then
     prompt="%{$fg[white]%}$(get_pwd) $(git_prompt_info)$(get_git_status)\n$ret_status"
+  elif "$directoryFirst"; then
+    prompt="%{$fg[cyan]%}$(get_pwd) $(git_prompt_info)$(get_git_status)$ret_status%{$reset_color%}"
   fi
   echo $prompt
 }
